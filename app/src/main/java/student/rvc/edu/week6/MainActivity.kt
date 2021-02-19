@@ -34,8 +34,9 @@ class MainActivity : AppCompatActivity() {
                 "Radio" -> txtShow.text = "Name: ${txtFN.text.toString()} \nEmail: ${txtEM.text.toString()} \nHow did you find us? Radio"
                 "Other" -> txtShow.text = "Name: ${txtFN.text.toString()} \nEmail: ${txtEM.text.toString()} \nHow did you find us? Other"
             }
-            //HideKeyboard not needed when setting focus to textbox
-            //hideKeyboard()
+            /* HideKeyboard may not be needed when setting focus to textbox, but left it in
+               so it performs well on apptize.io simulator*/
+            hideKeyboard()
             //Clear text in txtFullName and txtEmail textboxes on SUBMIT
             txtFN.setText("")
             txtEM.setText("")
